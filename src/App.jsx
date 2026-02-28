@@ -7,7 +7,7 @@ function App() {
   const [weather, setWeather] = useState(null)
 
   const getWeather = async()=>{
-    const apiKey = "eae459f3049b6ca440aa1347a6a5c827" 
+    const apiKey = import.meta.env.API_KEY; 
 
     const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
 
